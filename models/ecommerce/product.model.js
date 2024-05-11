@@ -1,32 +1,32 @@
 import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema( {
-    description:{
+    description: {
         type: String,
         required: true
     },
-    name:{
+    name: {
         type: String,
         required: true
     },
-    prouductImage:{
+    prouductImage: {
         type: String,
         required: true
     },
-    price:{
+    price: {
         type: Number,
         default: 0
     },
-    stock:{
+    stock: {
         type: Number,
         default: 0
     },
-    category:{
+    category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
         required: true
     },
-    owner:{
+    owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }
